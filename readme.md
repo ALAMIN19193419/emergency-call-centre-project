@@ -1,6 +1,8 @@
 
 
-
+Question-1.
+What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+Answer.........
 1) getElementById, getElementsByClassName, querySelector / querySelectorAll
 
 getElementById("id") → একটা মাত্র এলিমেন্ট ফেরত দেয় যেটার ID মিলে।
@@ -13,7 +15,10 @@ querySelectorAll("selector") → সব ম্যাচিং এলিমেন
 
 
 
-2) DOM-এ নতুন এলিমেন্ট তৈরি ও ইনসার্ট করা
+
+2.How do you create and insert a new element into the DOM?
+Answer....
+DOM-এ নতুন এলিমেন্ট তৈরি ও ইনসার্ট করা
 let div = document.createElement("div");   // নতুন div তৈরি
 div.textContent = "Hello!";               // লেখা যোগ
 document.body.appendChild(div);           // DOM-এ যোগ
@@ -26,16 +31,20 @@ insertBefore() → নির্দিষ্ট স্থানে যোগ
 
 
 
-3) Event Bubbling
+
+3)What is Event Bubbling and how does it work?
+Answer........
+Event Bubbling
 
 ইভেন্ট child → parent → ancestor ক্রমে উঠে।
 
 উদাহরণ: একটি button ক্লিক করলে প্রথম button, তারপর তার parent div, তারপর body-এ ইভেন্ট ট্রিগার হয়।
 
 
+4)What is Event Delegation in JavaScript? Why is it useful?
+Answer.......
 
-
-4) Event Delegation
+Event Delegation
 
 Parent element-এ ইভেন্ট বসানো, তারপর child এলিমেন্টের ক্লিক বা অন্য ইভেন্ট handle করা।
 
@@ -44,8 +53,10 @@ Parent element-এ ইভেন্ট বসানো, তারপর child এ
 
 
 
+5)What is the difference between preventDefault() and stopPropagation() methods?
+Answer.....
 
-5) preventDefault() vs stopPropagation()
+ preventDefault() vs stopPropagation()
 
 preventDefault() → ব্রাউজারের default action বন্ধ করে (যেমন link ক্লিক → page reload বন্ধ)।
 
