@@ -9,7 +9,25 @@
 </head>
 <body class="bg-gray-100">
 
-
+    <nav class="bg-white shadow-md py-4 px-8 flex justify-between items-center fixed top-0 left-0 right-0 z-50">
+        <div class="flex items-center space-x-2">
+            <img src="assets/logo.png" alt="Emergency Service Logo" class="w-8 h-8">
+            <span class="text-xl md:text-2xl font-bold text-green-500">Emergency<br>Service</span>
+        </div>
+        <div class="flex items-center space-x-8">
+            <div class="flex items-center space-x-1">
+                <i class="fas fa-heart text-red-500 text-lg"></i>
+                <span id="heart-count" class="font-bold">0</span>
+            </div>
+            <div class="flex items-center space-x-1">
+                <i class="fas fa-coins text-yellow-500 text-lg"></i>
+                <span id="coin-count" class="font-bold">100</span>
+            </div>
+            <div class="flex items-center space-x-1">
+                <span id="copy-count-badge" class="text-xs font-semibold px-4 py-2 bg-green-500 text-white rounded-full hidden md:block">0 Copy</span>
+            </div>
+        </div>
+    </nav>
     
     <div class="pt-20">
         <section class="text-white py-12 px-8 text-center" style="background: linear-gradient(to right, #013223 0%, #014C34 25%, #00563B 34%, #006747 50%, #013223 100%); width: 100%; height: 239px; padding-top: 60px; padding-bottom: 12px;">
@@ -190,20 +208,7 @@
                                 <p class="text-sm text-gray-500">Electricity Outage</p>
                             </div>
                         </div>
-                        <div class="mb-4">
-                            <p class="text-3xl font-bold text-dark">16216</p>
-                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Electricity</span>
-                        </div>
-                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
-                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
-                                <i class="fas fa-copy mr-2"></i>
-                                Copy
-                            </button>
-                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
-                                <i class="fas fa-phone-alt mr-2"></i>
-                                Call
-                            </button>
-                        </div>
+                        
                     </div>
                     <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Brac Helpline" data-hotline-number="16445" data-category="NGO">
                         <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
@@ -274,6 +279,6 @@
         </main>
     </div>
 
-    <script src="java.js"></script>
+    <script src=""></script>
 </body>
 </html>
