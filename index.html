@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-white shadow-md py-4 px-8 flex justify-between items-center fixed top-0 left-0 right-0 z-50">
+        <div class="flex items-center space-x-2">
+            <img src="assets/logo.png" alt="Emergency Service Logo" class="w-8 h-8">
+            <span class="text-xl md:text-2xl font-bold text-green-500">Emergency<br>Service</span>
+        </div>
+        <div class="flex items-center space-x-8">
+            <div class="flex items-center space-x-1">
+                <i class="fas fa-heart text-red-500 text-lg"></i>
+                <span id="heart-count" class="font-bold">0</span>
+            </div>
+            <div class="flex items-center space-x-1">
+                <i class="fas fa-coins text-yellow-500 text-lg"></i>
+                <span id="coin-count" class="font-bold">100</span>
+            </div>
+            <div class="flex items-center space-x-1">
+                <span id="copy-count-badge" class="text-xs font-semibold px-4 py-2 bg-green-500 text-white rounded-full hidden md:block">0 Copy</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="pt-20">
+        <section class="text-white py-12 px-8 text-center" style="background: linear-gradient(to right, #013223 0%, #014C34 25%, #00563B 34%, #006747 50%, #013223 100%); width: 100%; height: 239px; padding-top: 60px; padding-bottom: 12px;">
+            <div class="flex justify-center mb-1">
+                <img src="assets/logo-dark.png" alt="Bangladesh Government Logo" class="w-20 h-20">
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-3">Emergency Service Directory</h1>
+            <p class="text-sm md:text-lg px-3">Government Emergency Services at Your Fingertip - A Project by Government of the People's Republic of Bangladesh</p>
+        </section>
+
+        <main class="container mx-auto p-4 md:grid md:grid-cols-3 gap-8 mt-8">
+            <div class="md:col-span-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="hotline-cards-container">
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="National Emergency" data-hotline-number="999" data-category="All">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/emergency.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">National Emergency Number</h3>
+                                <p class="text-sm text-gray-500">National Emergency</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">999</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">All</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Police Helpline Number" data-hotline-number="999" data-category="Police">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/police.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Police Helpline Number</h3>
+                                <p class="text-sm text-gray-500">Police</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">999</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Police</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Fire Service Number" data-hotline-number="999" data-category="Fire">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-8 mb-8">
+                            <img src="assets/fire-service.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Fire Service Number</h3>
+                                <p class="text-sm text-gray-500">Fire Service</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">999</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Fire</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Ambulance Service" data-hotline-number="1994-999999" data-category="Health">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/ambulance.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Ambulance Service</h3>
+                                <p class="text-sm text-gray-500">Ambulance</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">1994-999999</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Health</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Women & Child Helpline" data-hotline-number="109" data-category="Help">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/emergency.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Women & Child Helpline</h3>
+                                <p class="text-sm text-gray-500">Women & Child Helpline</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">109</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Help</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Anti-Corruption Helpline" data-hotline-number="106" data-category="Govt.">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/emergency.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Anti-Corruption Helpline</h3>
+                                <p class="text-sm text-gray-500">Anti-Corruption</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">106</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Govt.</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Electricity Helpline" data-hotline-number="16216" data-category="Electricity">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/emergency.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Electricity Helpline</h3>
+                                <p class="text-sm text-gray-500">Electricity Outage</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">16216</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Electricity</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Brac Helpline" data-hotline-number="16445" data-category="NGO">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/brac.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Brac Helpline</h3>
+                                <p class="text-sm text-gray-500">Brac</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">16445</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">NGO</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 relative card" data-service-name="Bangladesh Railway Helpline" data-hotline-number="163" data-category="Travel">
+                        <div class="absolute top-4 right-4 text-red-500 cursor-pointer heart-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <img src="assets/emergency.png" alt="Icon" class="w-12 h-12">
+                            <div>
+                                <h3 class="text-lg font-bold">Bangladesh Railway Helpline</h3>
+                                <p class="text-sm text-gray-500">Bangladesh Railway</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-3xl font-bold text-dark">163</p>
+                            <span class="text-xs font-semibold px-2 py-1 bg-gray-200 rounded-full">Travel</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+                            <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-800 rounded-md flex items-center justify-center copy-button">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy
+                            </button>
+                            <button class="flex-1 py-2 px-4 bg-green-500 text-white rounded-md flex items-center justify-center call-button">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-1 bg-white rounded-lg shadow-md p-6 h-fit mt-8 md:mt-0">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-history text-blue-500 text-xl"></i>
+                        <h3 class="text-lg font-bold">Call History</h3>
+                    </div>
+                    <button id="clear-history-btn" class="text-sm text-blue-500 hover:text-blue-700">Clear</button>
+                </div>
+                <div id="call-history-list" class="space-y-4">
+                    </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
